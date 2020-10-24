@@ -28,7 +28,7 @@ namespace FindMaxProblem
                 Console.WriteLine("max from generic\t" + maxFromGeneric);
 
                 //using parametrized constructor
-                GenericClass<float> genericClass = new GenericClass<float>(45.5f, 4555.5f, 4.5f);
+                GenericClass<float> genericClass = new GenericClass<float>(45.5f, 4555.5f, 4.5f, 4444444f, 543f);
                 //Object can not call static method directly, so get method is called which passes parameter values to static method
                 float max = genericClass.GetMethod();
                 Console.WriteLine("max from using parametrized constructor\t" + max);
