@@ -71,5 +71,13 @@ namespace FindMaxProblem
             T maximum = SortingOfNumbers(inputNumbers);
             return maximum;
         }
+        /// <summary>
+        /// used to print the result in generic class, so that another variable with datatype of T is not defined in main class
+        /// </summary>
+        public void printMaxGenericMethod()
+        {
+            T printingMaxValue = GetMethod();
+            Console.WriteLine("max from using parametrized constructor\t" + printingMaxValue);
+        }
     }
 }

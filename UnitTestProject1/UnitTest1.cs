@@ -167,6 +167,20 @@ namespace findMaxMSTest
             //assert
             Assert.AreEqual(actual, expected);
         }
+        [TestMethod]
+        [DataRow(5.6f, 2.3f, 112.3f, 223.5f, 323, 323)]
+
+        public void MaxFromGenericWhenValuesArePassedWithparams(params float[] values)
+        {
+            //assert
+            GenericClass<float> genericClass = new GenericClass<float>(values);
+            float expected = 323;
+            //add
+            float actual = genericClass.GetMethod();
+            //assert
+            Assert.AreEqual(expected, actual);
+
+        }
     }
 
 }
